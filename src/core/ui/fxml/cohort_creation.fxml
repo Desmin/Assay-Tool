@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="234.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/8.0.91"
+      fx:controller="core.ui.controllers.CohortCreationController">
+    <children>
+        <DatePicker fx:id="eclosionDate" layoutX="222.0" layoutY="20.0" prefHeight="31.0" prefWidth="140.0"
+                    promptText="Eclosion Date"/>
+        <Spinner fx:id="maleSpinner" editable="true" layoutX="87.0" layoutY="95.0" onKeyReleased="#updateTotalFlies"
+                 onMouseClicked="#updateTotalFlies" prefHeight="31.0" prefWidth="83.0"/>
+        <Spinner fx:id="femaleSpinner" editable="true" layoutX="258.0" layoutY="95.0" onKeyReleased="#updateTotalFlies"
+                 onMouseClicked="#updateTotalFlies" prefHeight="31.0" prefWidth="83.0"/>
+        <Button fx:id="submitButton" layoutX="84.0" layoutY="188.0" mnemonicParsing="false"
+                onMouseClicked="#createCohort" text="Submit"/>
+        <Button fx:id="cancelButton" layoutX="237.0" layoutY="188.0" mnemonicParsing="false"
+                onMouseClicked="#closeWindow" text="Cancel"/>
+        <Spinner fx:id="paternalAgeSpinner" editable="true" layoutX="197.0" layoutY="140.0" prefHeight="31.0"
+                 prefWidth="83.0"/>
+        <Label layoutX="40.0" layoutY="100.0" text="Male:"/>
+        <Label layoutX="197.0" layoutY="100.0" text="Female:"/>
+        <Label fx:id="totalFliesLabel" layoutX="159.0" layoutY="64.0" text="Total flies: 2"/>
+        <Label layoutX="105.0" layoutY="145.0" text="Paternal Age:"/>
+        <ChoiceBox fx:id="paternalIdentifierChoiceBox" layoutX="139.0" layoutY="20.0" prefHeight="31.0"
+                   prefWidth="67.0"/>
+        <Label layoutX="14.0" layoutY="25.0" text="Paternal Identifier"/>
+    </children>
+</Pane>

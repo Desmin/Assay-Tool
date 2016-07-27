@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="347.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.91"
+      fx:controller="core.ui.controllers.AssayController">
+    <children>
+        <MenuBar prefHeight="0.0" prefWidth="600.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#close" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem fx:id="createMenuItem" mnemonicParsing="false" onAction="#createAssay" text="Create"/>
+                        <MenuItem fx:id="deleteMenuItem" mnemonicParsing="false" onAction="#deleteAssay" text="Delete"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="About"/>
+            </menus>
+        </MenuBar>
+        <Button fx:id="createButton" layoutX="222.0" layoutY="302.0" mnemonicParsing="false"
+                onMouseClicked="#createAssay" text="Create"/>
+        <Button fx:id="deleteButton" layoutX="315.0" layoutY="302.0" mnemonicParsing="false"
+                onMouseClicked="#deleteAssay" text="Delete"/>
+        <ListView fx:id="assayListView" layoutX="13.0" layoutY="57.0" onMouseClicked="#openAssay" prefHeight="237.0"
+                  prefWidth="575.0"/>
+        <Label layoutX="279.0" layoutY="32.0" text="Assays"/>
+    </children>
+</Pane>
